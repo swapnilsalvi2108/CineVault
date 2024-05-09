@@ -45,7 +45,7 @@ function MovieDetail(){
     axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
     .then(res => setMedia(res.data));
     setTimeout(()=>{setIsLoading(false)}, 900);
-  }, [id]);
+  }, [id]);//eslint-disable-line
 
   return(
     <div className="detailContainer">
