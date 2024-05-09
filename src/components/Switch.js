@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './Switch.css';
 import classnames from 'classnames';
 

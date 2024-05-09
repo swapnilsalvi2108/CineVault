@@ -1,10 +1,8 @@
 import Grid from "./Grid/Grid";
 import Header from "./Header/Header";
-import {RecoilRoot, useRecoilValue} from 'recoil'
+import {RecoilRoot} from 'recoil'
 import Loader from "./Loader";
 import './App.css'
-import EmptyState from "./LandingPage";
-import { pageState, searchState } from "./atoms";
 import LandingPage from "./LandingPage";
 
 const App = () => {

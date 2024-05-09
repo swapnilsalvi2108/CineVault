@@ -1,13 +1,12 @@
-import { useRecoilState, useSetRecoilState } from 'recoil'
+import { useRecoilState } from 'recoil'
 import '../App.css'
 import TextField from '../components/TextField'
-import { pageState, searchState, titlesState } from '../atoms'
-import Filter from '../Filters'
+import { searchState, titlesState } from '../atoms'
 import SwitchContent from '../SwitchContent'
 
 const Header = () => {
   const [searchValue, setSearchValue] = useRecoilState(searchState);
-  const [titles, setTitles] = useRecoilState(titlesState);
+  const [, setTitles] = useRecoilState(titlesState);
 
   const handleValueChange = (value) => {
     console.log('jhdcvg');

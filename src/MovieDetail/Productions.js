@@ -14,7 +14,7 @@ function Productions({data}){
       {data.map(item=>{
           return (
             <div className='companyContainer'>
-              <img className="logos" src={getImgUrl(item)}/>
+              <img className="logos" src={getImgUrl(item)} alt=""/>
               <span className='name'>{item.name}</span>
             </div>
           )

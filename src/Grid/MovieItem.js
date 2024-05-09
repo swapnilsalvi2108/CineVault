@@ -6,7 +6,6 @@ import { aContent } from '../atoms';
 import classnames from 'classnames';
 import { useNavigate } from 'react-router-dom';
 import { LuEyeOff } from "react-icons/lu";
-import { BiSolidMovie } from "react-icons/bi";
 
 const MovieItem = ({movie, isLastItem, pullNext}) => {
   const showAContent = useRecoilValue(aContent);
@@ -25,7 +24,7 @@ const MovieItem = ({movie, isLastItem, pullNext}) => {
   const getImgComponent = () => {
     return <img 
       className={classnames('poster', {'blur': !showAContent && movie.adult})} 
-      src={getImgUrl()}/>
+      src={getImgUrl()} alt=""/>
   }
 
   const getChildrenUrl = () => {

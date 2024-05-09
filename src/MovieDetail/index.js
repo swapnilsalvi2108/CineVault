@@ -45,7 +45,7 @@ function MovieDetail(){
     axios.get(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options)
     .then(res => setMedia(res.data));
     setTimeout(()=>{setIsLoading(false)}, 900);
-  },[id]);
+  }, [id]);
 
   return(
     <div className="detailContainer">
@@ -57,8 +57,8 @@ function MovieDetail(){
         <>
           <div>
             <div className="detail">
-              <img className="backdrop" src={img}/>
-              <img className="poster" src={img}/>
+              <img alt="" className="backdrop" src={img}/>
+              <img alt="" className="poster" src={img}/>
             </div>
             <div className="titleContainer">
               <div className="title">

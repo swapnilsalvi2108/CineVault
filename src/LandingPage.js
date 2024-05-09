@@ -1,14 +1,13 @@
 import { useMemo, useRef } from 'react';
 import './App.css';
 import TextField from './components/TextField';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useSetRecoilState, useRecoilState } from 'recoil';
 import { searchState, titlesState } from './atoms';
 
 const LandingPage = () => {
   const bgRef = useRef();
   const [searchValue, setSearchValue] = useRecoilState(searchState);
-  const [titles, setTitles] = useRecoilState(titlesState);
-  const titleData = useRecoilValue(titlesState);
+  const setTitles = useSetRecoilState(titlesState);
   const handleValueChange = (value) => {
     const isNewValue = value !== searchValue.value
     if(isNewValue){
@@ -25,7 +24,7 @@ const LandingPage = () => {
   }
   return(
     <div className="emptyState">
-      <img className="bgImg" ref={bgRef} src={imgSrc}/>
+      <img className="bgImg" ref={bgRef} alt='' src={imgSrc}/>
       <div className='emptySearchContainer'>
         <h1 className='title'>Cine Vault</h1>
         <TextField textValue={searchValue.value} handleChange={handleValueChange}/>

@@ -3,7 +3,7 @@ import '../App.css';
 const EmptyState = () => {
   return(
     <div className='gridNotFound'>
-      <img className='notFound' src="broken.jpg"/>
+      <img className='notFound' alt="" src="broken.jpg"/>
     </div>
   )
 }

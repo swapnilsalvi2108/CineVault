@@ -1,7 +1,7 @@
 import './TextField.css';
 import {FaSearch} from 'react-icons/fa';
 import classnames from 'classnames';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 let timer;
 function debounce(func, timeout = 300){

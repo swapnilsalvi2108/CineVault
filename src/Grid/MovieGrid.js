@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
+import { useRecoilState, useRecoilValue } from 'recoil'
 import { loadingState, pageState, titlesState } from '../atoms'
 import MovieItem from './MovieItem';
 import './MovieGrid.css'

@@ -1,12 +1,12 @@
 import {useEffect} from 'react'
-import {useRecoilState, useRecoilValue, useSetRecoilState} from 'recoil';
+import {useRecoilState, useSetRecoilState} from 'recoil';
 import { loadingState, pageState, searchState, titlesState } from './atoms';
 import axios from 'axios';
 
 const Loader = () => {
   const [searchValue, setSearchValue] = useRecoilState(searchState);
   const [page, setPage] = useRecoilState(pageState);
-  const [titles, setTitles] = useRecoilState(titlesState);
+  const setTitles = useSetRecoilState(titlesState);
   const setLoader = useSetRecoilState(loadingState);
 
   const fetcher = () => {
