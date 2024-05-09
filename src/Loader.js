@@ -40,7 +40,7 @@ const Loader = () => {
 
   useEffect(()=>{
     fetcher()
-  },[searchValue.value, page.page]);
+  },[searchValue.value, page.page]); //eslint-disable-line
 
   return null
 }
