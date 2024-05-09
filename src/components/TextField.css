@@ -1,0 +1,40 @@
+.searchContainer{
+  display: flex;
+  align-items: center;
+  background-color: ghostwhite;
+  width: 80%;
+  height: 100%;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+  justify-content: center;
+  position: relative;
+  &.hasValue{
+    width: 120px;
+    padding: 0 20px;
+  }
+  .searchButton{
+    position: absolute;
+    right: 8px;
+    width: 15px;
+    color: black;
+    height: 15px;
+  }
+  .searchInput{
+    height: 40px;
+    width: inherit;
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+  }
+  &:hover{
+    width: 120px;
+    padding: 0 20px;
+  }
+}
+
+/* .searchContainer:hover .searchInput,
+.searchContainer.has-value .searchInput  {
+  opacity: 1;
+} */

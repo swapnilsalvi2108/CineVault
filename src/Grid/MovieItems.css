@@ -1,0 +1,62 @@
+.movieContainer{
+  animation: fadeInUp 0.5s ease-in forwards;
+  width: 250px;
+  height: 250px;
+  cursor: pointer;
+  position: relative;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  .poster{
+    width: inherit;
+    height: inherit;
+    filter: grayscale(0) blur(0px);
+    z-index: 1;
+    transition: filter 0.7s ease-in-out;
+    cursor: pointer;
+    &.blur{
+      cursor: not-allowed;
+      filter:  grayscale(1) blur(15px);;
+      clip-path: inset(0);
+      &::before{
+        content: 'UA';
+        z-index: 2
+      }
+    }
+  }
+  .blurContent{
+    position: absolute;
+    top: 50%;
+    color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .movieContainer {
+    background-color: black;
+    width: 300px; 
+    height: 300px;
+    .poster{
+      width: inherit;
+      height: inherit;
+      &.blur{
+        filter: blur(20px);
+        &::before{
+          content: 'UA';
+          z-index: 2
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

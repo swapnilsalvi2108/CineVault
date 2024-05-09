@@ -1,0 +1,9 @@
+.swicthContent{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .switchIcons{
+    width: 20px;
+    height: 20px;
+  }
+}

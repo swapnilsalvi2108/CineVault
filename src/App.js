@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Grid from "./Grid/Grid";
+import Header from "./Header/Header";
+import {RecoilRoot, useRecoilValue} from 'recoil'
+import Loader from "./Loader";
+import './App.css'
+import EmptyState from "./LandingPage";
+import { pageState, searchState } from "./atoms";
+import LandingPage from "./LandingPage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+  return(
+    <div className="appContainer">
+      <RecoilRoot>
+        <Loader/>
+        <Header/>
+        <LandingPage/>
+        <Grid/>
+      </RecoilRoot>
     </div>
-  );
+  )
 }
 
 export default App;
